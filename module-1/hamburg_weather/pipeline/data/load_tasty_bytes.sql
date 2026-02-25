@@ -302,11 +302,9 @@ COPY INTO {{env}}_tasty_bytes.raw_pos.country
     iso_country,
     city_id,
     city,
-    city_population
+    city_population,
  )
 
--- country table load
-COPY INTO {{env}}_tasty_bytes.raw_pos.country
 FROM @{{env}}_tasty_bytes.public.s3load/raw_pos/country/;
 
 
